@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Expense Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project aims to help you manage/track your expenses.
 
-## Available Scripts
+Although, currently this is just an initial design and implementations. I am sure that pushing this forward will require
+lots of ui ux changes at the same time it definitely need some major refactoring. 
 
-In the project directory, you can run:
+## Tech Stack
 
-### `yarn start`
+This project was bootstraped using create-react (https://reactjs.org/docs/create-a-new-react-app.html).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is a frontend javascript app implemented using React Js. (https://reactjs.org)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+On top of javascript, it's using Typescript for application type annotations. (https://www.typescriptlang.org/)
 
-### `yarn test`
+For state management, it's using Redux (https://redux.js.org/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pure Frontend Application
 
-### `yarn build`
+This is purely an independent react javascript application that will connect to a dedicated restful api (Let's discuss it later).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend Api Counter Part
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I've also built a simple restful api using Rails that will accomodate all data transactions and request this frontend application requires.
+You can check it out in this repo. (https://github.com/ezravalmores/expense-tracker-api)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to run locally
 
-### `yarn eject`
+You have to atleast have or installed a version of node 14.4.0 or higher.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Install dependencies by `yarn install` or `npm i`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For this to run instantly or smootly connected with the backend. Run this using port `3001` and run backend app using port `3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Run it `PORT=3001 yarn start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Clone and run backend api (https://github.com/ezravalmores/expense-tracker-api).
+You can find more information on how you can run api locally in above repo link. 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
