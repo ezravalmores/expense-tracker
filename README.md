@@ -19,6 +19,17 @@ For state management, it's using Redux (https://redux.js.org/)
 
 This is purely an independent react javascript application that will connect to a dedicated restful api (Let's discuss it later).
 
+## Considerations
+
+As I've said this for sure requires lots of improvement moving forward.
+
+I want to apply code splitting before deploying this to production so that we can improve initial loading time. Doing that, the whole codebase will
+not be loaded fully initially, WE WILL ONLY LOAD JAVASCRIPT CODE by demand.
+
+For multiple users support, definitely we need to implement a signup and authentication feature to support it then we can relate entries to the logged in user.
+
+In general, to improve performance, backend and frontend needs to work correctly. You have to have a correct mindset and sets of goals to achieve it.
+
 ## Backend Api Counter Part
 
 I've also built a simple restful api using Rails that will accomodate all data transactions and request this frontend application requires.
