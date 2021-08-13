@@ -34,6 +34,9 @@ For this to run instantly or smootly connected with the backend. Run this using 
 
 Run it `PORT=3001 yarn start`
 
+You can also specify the port of your api by creating an `.env` file and adding this ENV VAR.
+`REACT_APP_API_BASE_ENDPOINT=localhost:3002`
+
 Clone and run backend api (https://github.com/ezravalmores/expense-tracker-api).
 You can find more information on how you can run api locally in above repo link. 
 
