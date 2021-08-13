@@ -1,5 +1,19 @@
 import { useState, useEffect, ChangeEvent } from 'react';
-import { Box, MenuItem, FormControl, InputLabel, Select, makeStyles, TextField, Button, CircularProgress, Typography, Paper, withStyles, Modal } from '@material-ui/core';
+import {
+  Box,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Select,
+  makeStyles,
+  TextField,
+  Button,
+  CircularProgress,
+  Typography,
+  Paper,
+  withStyles,
+  Modal
+} from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -105,6 +119,7 @@ const CategoriesPage = () => {
   const deleteFailed = useSelector((state: RootStore) => state.category.deletingCategoryFailed);
   const saveSuccess = useSelector((state: RootStore) => state.category.savingCategorySuccess);
 
+  // Form default values
   const handleFormDefaultValue = () => {
     if (isNil(selectedCategory)) return;
 
@@ -126,9 +141,10 @@ const CategoriesPage = () => {
     dispatch(getCategories());
   }
 
+  // Get categories on mount
   useEffect(fetchResources, [dispatch]);
 
-  // When save, delete succeed
+  // Callback when save, delete succeed
   useEffect(() => {
     if (saveSuccess) dispatch(openCategoryModal(false));
     if (deleteSuccess) setShowConfirmationModal(false);
@@ -155,6 +171,7 @@ const CategoriesPage = () => {
     dispatch(deleteCategory(selectedCategory.id));
   }
 
+  // Submit form and call api
   const submit = () => {
     const payload: CategoryPayload = {
       name,

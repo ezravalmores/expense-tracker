@@ -11,6 +11,7 @@ import { getExpenses } from '../actions/expense/actions';
 import { Category, Expense } from '../interfaces/application';
 import { sumPositive } from '../utils/amounts';
 
+// Let's select bar colors here randomly.
 const colors = ['#F44520', '#11A308', '#0E3AC4', '#D3D322', '#22B0D3', '#22D3C3', '#A8D322', '#DCAB10', '##F08080', '##FF7F50']
 
 const useStyle = makeStyles({

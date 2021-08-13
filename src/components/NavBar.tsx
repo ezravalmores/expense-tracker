@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// TDDO: need to use links here not buttons.
+
 const NavBar: React.FC = () => {
   const styles = useStyles();
 
